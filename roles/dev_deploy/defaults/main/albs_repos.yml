@@ -1,9 +1,9 @@
 albs_repos:
-  albs-frontend: https://github.com/AlmaLinux/albs-frontend.git
-  albs-node: https://github.com/AlmaLinux/albs-node.git
-  albs-web-server: https://github.com/AlmaLinux/albs-web-server.git
-  albs-sign-node: https://github.com/AlmaLinux/albs-sign-node.git
-  alma-tests-cacher: https://github.com/AlmaLinux/alma-tests-cacher.git
+  albs-frontend: https://github.com/oreonproject/albs-frontend.git
+  albs-node: https://github.com/oreonproject/albs-node.git
+  albs-web-server: https://github.com/oreonproject/albs-web-server.git
+  albs-sign-node: https://github.com/oreonproject/albs-sign-node.git
+  alma-tests-cacher: https://github.com/oreonproject/alma-tests-cacher.git
   repo-beholder: https://github.com/AlmaLinux/repo-beholder.git
-  alts: https://github.com/AlmaLinux/alts.git
-  albs-sign-file: https://github.com/AlmaLinux/albs-sign-file.git
+  alts: https://github.com/oreonproject/alts.git
+  albs-sign-file: https://github.com/oreonproject/albs-sign-file.git
