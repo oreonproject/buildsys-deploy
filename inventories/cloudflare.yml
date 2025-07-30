@@ -1,2 +1,2 @@
-[cloudflare_builders]
+[cf-gateway]
 cf-gateway ansible_connection=local

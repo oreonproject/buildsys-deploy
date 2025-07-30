@@ -3,8 +3,14 @@ github_client: <OAuth client id>
 github_client_secret: <OAuth token>
 frontend_baseurl: http://<Preferred hostname or IP address>:8080
 
-# Cloudflare
-cloudflare_account_id: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-cloudflare_api_token:  "CF_API_TOKEN_WITH_Containers_Edit_And_Workers_Write"
-cloudflare_worker_name: "albs-build-gateway"
-cloudflare_r2_bucket:  "albs-results"
+# Cloudflare credentials
+cloudflare_account_id:  "XXXXXXXXXXXX"
+cloudflare_api_token:   "cf_api_token_with_containers_scope"
+
+# Matrix of builders you want the gateway to expose
+cloudflare_archs:       ["x86_64", "aarch64"]
+cloudflare_releases:    ["or10", "or11"]      # add more later
+
+# Generic settings already used by the role
+cf_instance_type: standard
+cf_idle_timeout: 300

@@ -1,0 +1,6 @@
+FROM fedora:42
+RUN dnf -y groupinstall "Development Tools" \
+    && dnf -y install git mock rpm-build \
+    && dnf clean all
+COPY albs-build-runner.sh /usr/local/bin/
+CMD ["/usr/local/bin/albs-build-runner.sh"]

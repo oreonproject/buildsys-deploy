@@ -1,0 +1,20 @@
+- name: Ensure wrangler is present
+  pip:
+    name: wrangler==3.*
+
+- name: Render project skeleton
+  template: src={{ item.src }} dest={{ playbook_dir }}/cf/{{ item.dest }}
+  loop:
+    - {src: Dockerfile.j2, dest: Dockerfile}
+    - {src: wrangler.toml.j2, dest: wrangler.toml}
+    - {src: worker.js.j2,   dest: src/worker.js}
+
+- name: Deploy Worker + Container
+  command: >
+    wrangler deploy
+    CF_API_TOKEN={{ cloudflare_api_token }}
+  args:
+    chdir: "{{ playbook_dir }}/cf"
+  register: wrangler_out
+
+- debug: var=wrangler_out.stderr_lines
