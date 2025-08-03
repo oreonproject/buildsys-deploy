@@ -4,10 +4,4 @@
   roles:
     - dev_deploy
   connection: "{{ 'local' if use_local_connection else 'ssh' }}"
-
-- name: Deploy Cloudflare ALBS builder gateway
-  hosts: cf-gateway
-  gather_facts: no
-  connection: local
-  roles:
-    - cloudflare_builder
+...
